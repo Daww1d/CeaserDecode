@@ -14,10 +14,10 @@ for i  in range(0,25):
 
     #loop throught each letter
     for letter in cipher:
-        if letter == "":
-            decode = decode + ""
-        else:
+        if letter.isalnum() == True:
             decode = decode + alphabet[alphabet.index(letter) + shift]
+        else:
+            decode = decode + letter
 
     #return result      
     print("The cipher shifted by {} is:\n".format(shift),decode,"\n")
